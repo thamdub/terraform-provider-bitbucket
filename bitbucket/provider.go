@@ -3,13 +3,12 @@ package bitbucket
 import (
 	"net/http"
 
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
 // Provider will create the necessary terraform provider to talk to the Bitbucket APIs you should
 // specify a USERNAME and PASSWORD
-func Provider() terraform.ResourceProvider {
+func Provider() *schema.Provider {
 	return &schema.Provider{
 		Schema: map[string]*schema.Schema{
 			"username": {

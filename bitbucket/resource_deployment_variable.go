@@ -4,13 +4,12 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"io/ioutil"
 	"log"
 	"net/url"
 	"strings"
 	"time"
-
-	"github.com/hashicorp/terraform/helper/schema"
 )
 
 // DeploymentVariable structure for handling key info

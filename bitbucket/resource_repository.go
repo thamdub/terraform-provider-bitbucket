@@ -8,7 +8,7 @@ import (
 
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
 // CloneURL is the internal struct we use to represent urls
