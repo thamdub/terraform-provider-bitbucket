@@ -123,7 +123,7 @@ func resourceDeploymentVariableRead(d *schema.ResourceData, m interface{}) error
 
 	repository, deployment := parseDeploymentId(d.Get("deployment").(string))
 	client := m.(*Client)
-	rvReq, _ := client.Get(fmt.Sprintf("2.0/repositories/%s/deployments_config/environments/%s/variables",
+	rvReq, _ := client.Get(fmt.Sprintf("2.0/repositories/%s/deployments_config/environments/%s/variables?pagelen=100",
 		repository,
 		deployment,
 	))
